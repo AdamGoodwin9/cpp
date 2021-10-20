@@ -1,5 +1,6 @@
 #include "Dog.hpp"
 #include "Cat.hpp"
+#include "WrongCat.hpp"
 
 int main()
 {
@@ -11,6 +12,14 @@ int main()
     cat->makeSound();
     dog->makeSound();
     animal->makeSound();
+
+    std::cout << "\nbad implementation:\n\n";
+
+    const WrongAnimal* wrongAnimal = new WrongAnimal();
+    const WrongAnimal* wrongCat = new WrongCat();
+    std::cout << cat->getType() << " " << std::endl;
+    wrongCat->makeSound();
+    wrongAnimal->makeSound();
 }
 
 /*

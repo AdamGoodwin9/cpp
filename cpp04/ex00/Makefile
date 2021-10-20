@@ -4,7 +4,9 @@ SRCS_DIR = ./
 SRCS =	main.cpp \
 		Animal.cpp \
 		Dog.cpp \
-		Cat.cpp
+		Cat.cpp \
+		WrongAnimal.cpp \
+		WrongCat.cpp
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
