@@ -11,9 +11,11 @@ private:
     int energyPoints;
     int attackDamage;
 public:
+    ClapTrap();
     ClapTrap(std::string);
     ~ClapTrap();
     ClapTrap(const ClapTrap&);
+    ClapTrap& operator=(const ClapTrap& c);
 
     void attack(std::string const& target);
     void takeDamage(unsigned int amount);

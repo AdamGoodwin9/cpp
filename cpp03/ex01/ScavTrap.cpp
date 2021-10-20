@@ -1,5 +1,15 @@
 #include "ScavTrap.hpp"
 
+ScavTrap::ScavTrap()
+: ClapTrap()
+{
+    name = "Scavvy";
+    hitPoints = 100;
+    energyPoints = 50;
+    attackDamage = 20;
+    std::cout << "ScavTrap " << name << " has been default constructed!\n";
+}
+
 ScavTrap::ScavTrap(std::string name)
 : ClapTrap(name)
 {
@@ -20,6 +30,12 @@ ScavTrap::ScavTrap(const ScavTrap& s)
     std::cout << "ScavTrap " << name << " has been copy constructed!\n";
 }
 
+ScavTrap& ScavTrap::operator=(const ScavTrap& s)
+{
+    ClapTrap::operator=(s);
+    std::cout << "ScavTrap " << name << " has been assigned!\n";
+    return *this;
+}
 
 void ScavTrap::attack(std::string const& target)
 {

@@ -1,5 +1,14 @@
 #include "ClapTrap.hpp"
 
+ClapTrap::ClapTrap()
+: name("Clappy"),
+  hitPoints(10),
+  energyPoints(10),
+  attackDamage(0)
+{
+    std::cout << "ClapTrap " << name << " has been default constructed!\n";
+}
+
 ClapTrap::ClapTrap(std::string name)
 : name(name),
   hitPoints(10),
@@ -23,6 +32,15 @@ ClapTrap::ClapTrap(const ClapTrap& c)
     std::cout << "ClapTrap " << name << " has been copy constructed!\n";
 }
 
+ClapTrap& ClapTrap::operator=(const ClapTrap& c)
+{
+	name = c.name;
+	hitPoints = c.hitPoints;
+	energyPoints = c.energyPoints;
+	attackDamage = c.attackDamage;
+	std::cout << "ClapTrap " << name << " has been assigned!\n";
+	return *this;
+}
 
 void ClapTrap::attack(std::string const& target)
 {
