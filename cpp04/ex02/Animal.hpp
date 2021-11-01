@@ -5,10 +5,9 @@
 
 class Animal
 {
-private:
+protected:
     Animal();
     Animal(const Animal&);
-protected:
     std::string type;
 public:
     virtual ~Animal();
