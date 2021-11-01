@@ -1,12 +1,11 @@
-NAME = moreAnimals
+NAME = animalBrains
 
 SRCS_DIR = ./
 SRCS =	main.cpp \
 		Animal.cpp \
 		Dog.cpp \
 		Cat.cpp \
-		WrongAnimal.cpp \
-		WrongCat.cpp
+		Brain.cpp
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
