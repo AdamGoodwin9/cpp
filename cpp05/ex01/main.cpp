@@ -1,35 +1,36 @@
-#include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int main()
 {
-    Bureaucrat jim = Bureaucrat("Jimmy", 1);
-    Bureaucrat gary = Bureaucrat("Big Gary", 150);
+    Form legal = Form("Legal Form", 1, 150);
+    Form health = Form("Health Form", 150, 1);
+
+    std::cout << legal;
+    std::cout << health;
 
     try
     {
-        jim.incrementGrade();
+        Form("A", 100, 0);
         std::cout << "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\n";
     }
     catch(std::exception& e)
     {
         std::cerr << e.what() << '\n';
     }
-    std::cout << jim;
-    std::cout << gary;
+
     try
     {
-        gary.decrementGrade();
+        Form("B", 0, 100);
         std::cout << "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\n";
     }
     catch(std::exception& e)
     {
         std::cerr << e.what() << '\n';
     }
-    std::cout << gary;
     
     try
     {
-        Bureaucrat("genius", 0);
+        Form("C", 151, 0);
         std::cout << "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\n";
     }
     catch(std::exception& e)
@@ -38,7 +39,7 @@ int main()
     }
     try
     {
-        Bureaucrat("idiot", 151);
+        Form("D", 0, 151);
         std::cout << "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\n";
     }
     catch(std::exception& e)
