@@ -1,4 +1,4 @@
-NAME = usefulfixed
+NAME = bestfixed
 
 SRCS_DIR = ./
 SRCS =	main.cpp \

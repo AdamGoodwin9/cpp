@@ -1,4 +1,4 @@
-NAME = fixed
+NAME = usefulfixed
 
 SRCS_DIR = ./
 SRCS =	main.cpp \
