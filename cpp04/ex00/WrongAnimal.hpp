@@ -9,7 +9,7 @@ protected:
     std::string type;
 public:
     WrongAnimal();
-    ~WrongAnimal();
+    virtual ~WrongAnimal();
     WrongAnimal(const WrongAnimal&);
     WrongAnimal& operator=(const WrongAnimal&);
 

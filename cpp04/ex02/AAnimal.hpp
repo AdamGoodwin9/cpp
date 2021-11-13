@@ -3,15 +3,15 @@
 
 #include <iostream>
 
-class Animal
+class AAnimal
 {
 protected:
-    Animal();
-    Animal(const Animal&);
+    AAnimal();
+    AAnimal(const AAnimal&);
     std::string type;
 public:
-    virtual ~Animal();
-    Animal& operator=(const Animal&);
+    virtual ~AAnimal();
+    AAnimal& operator=(const AAnimal&);
 
     virtual void makeSound() const;
     std::string getType() const;

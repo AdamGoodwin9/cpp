@@ -17,7 +17,7 @@ Cat::~Cat()
 Cat::Cat(const Cat& c)
 : Animal(c)
 {
-    b = c.b;
+    b = new Brain(*(c.b));
     std::cout << type << " has been copy constructed\n";
 }
 

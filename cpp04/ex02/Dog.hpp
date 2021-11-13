@@ -1,20 +1,20 @@
 #ifndef DOG_HPP
 #define DOG_HPP
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Brain.hpp"
 
-class Dog : public Animal
+class Dog : public AAnimal
 {
 private:
     Brain* b;
 public:
     Dog();
-    ~Dog();
+    virtual ~Dog();
     Dog(const Dog&);
     Dog& operator=(const Dog&);
 
-    void makeSound() const;
+    virtual void makeSound() const;
 };
 
 #endif

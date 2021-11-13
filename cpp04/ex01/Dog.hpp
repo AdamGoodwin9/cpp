@@ -10,11 +10,11 @@ private:
     Brain* b;
 public:
     Dog();
-    ~Dog();
+    virtual ~Dog();
     Dog(const Dog&);
     Dog& operator=(const Dog&);
 
-    void makeSound() const;
+    virtual void makeSound() const;
 };
 
 #endif

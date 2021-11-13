@@ -13,6 +13,8 @@ public:
     Brain(Brain const&);
     ~Brain();
     Brain& operator=(Brain const&);
+
+    void printIdeas();
 };
 
 #endif

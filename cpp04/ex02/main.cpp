@@ -3,11 +3,14 @@
 
 int main()
 {
-    Animal *animals[100];
+    size_t size = 10;
 
-    for (size_t i = 0; i < 100; i++)
+    AAnimal *animals[size];
+
+    std::cout << "initializing all the animals\n\n";   
+    for (size_t i = 0; i < size; i++)
     {
-        std::cout << i << std::endl;
+        std::cout << i << ": ";
         if (i % 2 == 0)
         {
             animals[i] = new Dog();
@@ -18,12 +21,17 @@ int main()
         } 
     }
 
-    for (size_t i = 0; i < 100; i++)
+    std::cout << "\nbrutally murdering  all the animals\n\n";
+    for (size_t i = 0; i < size; i++)
     {
         delete animals[i];
     }
     
-    //Animal* a = new Animal();
-
+    std::cout << "\nCREATING BASIC\n";
+    Dog basic;
+    std::cout << "CREATING TMP\n";
+    Dog tmp = basic;
+    std::cout << "DONE\n";
+    
     return 0;
 }

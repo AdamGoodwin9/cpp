@@ -13,7 +13,7 @@ public:
     MateriaSource(const MateriaSource&);
     MateriaSource& operator=(const MateriaSource&);
 
-    ~MateriaSource();
+    virtual ~MateriaSource();
     void learnMateria(AMateria*);
     AMateria* createMateria(std::string const& type);
 };

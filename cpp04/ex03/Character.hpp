@@ -16,7 +16,7 @@ public:
     Character& operator=(const Character&);
     Character(const Character&);
     
-    ~Character();
+    virtual ~Character();
     std::string const& getName() const;
     void equip(AMateria* m);
     void unequip(int idx);

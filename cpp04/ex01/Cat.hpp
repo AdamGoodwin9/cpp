@@ -10,11 +10,11 @@ private:
     Brain* b;
 public:
     Cat();
-    ~Cat();
+    virtual ~Cat();
     Cat(const Cat&);
     Cat& operator=(const Cat&);
 
-    void makeSound() const;
+    virtual void makeSound() const;
 };
 
 #endif

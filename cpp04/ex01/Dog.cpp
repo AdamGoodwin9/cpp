@@ -17,7 +17,7 @@ Dog::~Dog()
 Dog::Dog(const Dog& d)
 : Animal(d)
 {
-    b = d.b;
+    b = new Brain(*(d.b));
     std::cout << type << " has been copy constructed\n";
 }
 

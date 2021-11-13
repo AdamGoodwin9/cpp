@@ -1,7 +1,7 @@
 #include "Dog.hpp"
 
 Dog::Dog()
-: Animal()
+: AAnimal()
 {
     type = "Dog";
     b = new Brain();
@@ -15,16 +15,16 @@ Dog::~Dog()
 }
 
 Dog::Dog(const Dog& d)
-: Animal(d)
+: AAnimal(d)
 {
-    b = d.b;
+    b = new Brain(*(d.b));
     std::cout << type << " has been copy constructed\n";
 }
 
 Dog& Dog::operator=(const Dog& d)
 {
     b = d.b;
-    Animal::operator=(d);
+    AAnimal::operator=(d);
     std::cout << type << " assigned\n";
     return *this;
 }

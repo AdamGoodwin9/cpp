@@ -1,7 +1,7 @@
 #include "Cat.hpp"
 
 Cat::Cat()
-: Animal()
+: AAnimal()
 {
     type = "Cat";
     b = new Brain();
@@ -15,16 +15,16 @@ Cat::~Cat()
 }
 
 Cat::Cat(const Cat& c)
-: Animal(c)
+: AAnimal(c)
 {
-    b = c.b;
+    b = new Brain(*(c.b));
     std::cout << type << " has been copy constructed\n";
 }
 
 Cat& Cat::operator=(const Cat& c)
 {
     b = c.b;
-    Animal::operator=(c);
+    AAnimal::operator=(c);
     std::cout << type << " assigned\n";
     return *this;
 }
