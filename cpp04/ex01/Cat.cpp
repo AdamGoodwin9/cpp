@@ -23,7 +23,8 @@ Cat::Cat(const Cat& c)
 
 Cat& Cat::operator=(const Cat& c)
 {
-    b = c.b;
+    delete b;
+    b = new Brain(*(c.b));
     Animal::operator=(c);
     std::cout << type << " assigned\n";
     return *this;
