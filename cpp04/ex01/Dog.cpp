@@ -23,7 +23,7 @@ Dog::Dog(const Dog& d)
 
 Dog& Dog::operator=(const Dog& d)
 {
-    delete b;
+    if (b) delete b;
     b = new Brain(*(d.b));
     Animal::operator=(d);
     std::cout << type << " assigned\n";
