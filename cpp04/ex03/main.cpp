@@ -24,5 +24,11 @@ int main()
     delete bob;
     delete me;
     delete src;
+
+    AMateria* i = new Ice();
+    AMateria* other = i->clone();
+
+    delete i;
+    delete other;
     return 0;
 }

@@ -20,4 +20,10 @@ int main()
     std::cout << cat->getType() << " " << std::endl;
     wrongCat->makeSound();
     wrongAnimal->makeSound();
+
+    delete animal;
+    delete dog;
+    delete cat;
+    delete wrongAnimal;
+    delete wrongCat;
 }
