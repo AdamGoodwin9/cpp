@@ -35,7 +35,7 @@ public:
     int getGradeToSign() const;
     int getGradeToExecute() const;
 
-    void sign();
+    void beSigned(const Bureaucrat&);
     virtual void execute(const Bureaucrat&) const;
 };
 

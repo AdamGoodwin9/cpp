@@ -2,6 +2,9 @@
 #define FORM_HPP
 
 #include <iostream>
+#include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form
 {
@@ -34,7 +37,7 @@ public:
     int getGradeToSign() const;
     int getGradeToExecute() const;
 
-    void sign();
+    void beSigned(const Bureaucrat&);
 };
 
 std::ostream& operator<<(std::ostream&, const Form&);

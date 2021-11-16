@@ -59,8 +59,11 @@ int Form::getGradeToExecute() const
     return gradeToExecute;
 }
 
-void Form::sign()
+void Form::beSigned(const Bureaucrat& b)
 {
+    if (b.getGrade() > gradeToSign) throw Form::GradeTooLowException("Grade is too low!");
+    if (isSigned) throw std::runtime_error("Form already signed!");
+
     isSigned = true;
 }
 

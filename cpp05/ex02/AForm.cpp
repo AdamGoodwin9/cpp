@@ -59,9 +59,17 @@ int AForm::getGradeToExecute() const
     return gradeToExecute;
 }
 
-void AForm::sign()
+void AForm::beSigned(const Bureaucrat& b)
 {
+    if (b.getGrade() > gradeToSign) throw AForm::GradeTooLowException("Grade is too low!");
+    if (isSigned) throw std::runtime_error("Form already signed!");
+
     isSigned = true;
+}
+
+void AForm::execute(const Bureaucrat& b) const
+{
+    if (b.getGrade() < gradeToExecute) ;//throw if form not signed, throws if b.grade > gradeExecute
 }
 
 std::ostream& operator<<(std::ostream& os, const AForm& f)
