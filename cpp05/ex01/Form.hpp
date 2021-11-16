@@ -13,7 +13,7 @@ private:
     Form();
 public:
     Form(const Form&);
-    ~Form();
+    virtual ~Form();
     Form& operator=(const Form&);
     Form(const std::string, int, int);
 
