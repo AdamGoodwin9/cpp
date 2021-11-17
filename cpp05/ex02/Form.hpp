@@ -4,20 +4,21 @@
 #include <iostream>
 #include "Bureaucrat.hpp"
 
-class AForm
+class Bureaucrat;
+
+class Form
 {
-private:
+protected:
     std::string name;
     bool isSigned;
     int gradeToSign;
     int gradeToExecute;
-    AForm();
-protected:
-    AForm(const std::string, int, int);
-    AForm(const AForm&);
-    AForm& operator=(const AForm&);
+    Form();
+    Form(const std::string, int, int);
+    Form(const Form&);
+    Form& operator=(const Form&);
 public:
-    virtual ~AForm();
+    virtual ~Form();
     class GradeTooHighException : public std::runtime_error
     {
     public:
@@ -30,15 +31,21 @@ public:
         GradeTooLowException(const char*);
     };
 
+    class FormNotSignedException : public std::runtime_error
+    {
+    public:
+        FormNotSignedException(const char*);
+    };
+
     const std::string& getName() const;
     bool getIsSigned() const;
     int getGradeToSign() const;
     int getGradeToExecute() const;
 
     void beSigned(const Bureaucrat&);
-    virtual void execute(const Bureaucrat&) const;
+    virtual void execute(const Bureaucrat&) const = 0;
 };
 
-std::ostream& operator<<(std::ostream&, const AForm&);
+std::ostream& operator<<(std::ostream&, const Form&);
 
 #endif

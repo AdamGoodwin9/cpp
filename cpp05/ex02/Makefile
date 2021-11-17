@@ -3,7 +3,7 @@ NAME = variousForms
 SRCS_DIR = ./
 SRCS =	main.cpp \
 		Bureaucrat.cpp \
-		AForm.cpp \
+		Form.cpp \
 		ShrubberyCreationForm.cpp \
 		RobotomyRequestForm.cpp \
 		PresidentialPardonForm.cpp
